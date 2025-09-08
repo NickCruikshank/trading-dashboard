@@ -267,12 +267,13 @@ export default function Home() {
               </TableHeader>
               <TableBody>
                 {trades.length === 0 && (
-                  <TableRow>
-                    <TableCell colSpan={7} className="text-center text-muted-foreground">
-                      No trades yet (or API not running). You can add seeding later.
-                    </TableCell>
-                  </TableRow>
-                )}
+  <tr>
+    <td colSpan={7} className="text-center text-muted-foreground px-4 py-3">
+      No trades yet (or API not running). You can add seeding later.
+    </td>
+  </tr>
+)}
+
                 {trades.map((t) => (
                   <TableRow key={t.id}>
                     <TableCell>{t.ticker}</TableCell>
